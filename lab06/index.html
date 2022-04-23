@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div class="topnav">
+        <span style="font-family: Lucida Sans Unicode; font-style:bold; font-size:x-large;color:#dce9ee">LAB 04</span>
+      </div>
+</header>
+<div>
+  <h2 class="lineUp">TASK1</h2>
+  <h5> Create a function that calulates the power of 100 of a number entered as a parameter.</h5>
+  <h5>SOLUTION :</h5>
+    <p>
+function powerOfNum(base,exponent)<br>
+{ return Math.pow(base, exponent)} <br>
+console.log(powerOfNum(2,100));<br>
+</p>
+<h5>OUTPUT:</h5>
+<img src="task1.png" style="width:200px;height:50px;">
+</div>
+<div>
+  <div>
+    <h2 class="lineUp">TASK2</h2>
+    <h5>Write a javascript function that takes an array of numbers and a target number. The function should find two different numbers in the array that, when added together, give the target number. For example: answer([1,2,3], 4) should return [1,3].
+    </h5>
+    <h5>SOLUTION :</h5>
+      <p>
+        function arrayfunc() <br>
+{<br>
+ const numbers = [0,1,2,3,4,5]; <br>
+const num1 = parseInt(prompt('Enter the first number: '));<br>
+const num2 = parseInt(prompt('Enter the second number: '));<br>
+const sum = num1 + num2;   <br>
+    for (var i= 0; i < numbers.length; i++) {<br>
+        if (numbers[i]==sum) {<br>
+            console.log("The sum of user input matches the target:"+numbers[i]);}}<br>
+console.log("The sum doesnot match any target in array")<br>
+}<br>
+arrayfunc();<br>
+  </p>
+  <h5>OUTPUT :</h5>
+  <img src="task2.png">
+  </div>
+  <div>
+    <div>
+      <h2 class="lineUp"> TASK3</h2>
+      <h5>Write a javascript function and ask user to enter the age, this function aim to show a message that a person can drive, if the age is greater than or equal to 18 otherwise can’t drive, by using a ternary operator instead of the if-else statement.
+      </h5>
+      <h5>SOLUTION :</h5>
+        <p>
+            function DriveCar() <br>
+            {<br>
+            var message;<br>
+            var age = parseInt(prompt('Enter your age: '));<br>
+            message = age >= 18 ? 'You can drive.' : 'You cannot drive.';<br>
+            console.log(message);<br>
+            }<br>
+            DriveCar();<br>       
+    </p>
+    <h5>OUTPUT:</h5>
+    <img src="task3.png" style="height:150px;">
+    </div>
+    <div>
+      <div>
+        <h2 class="lineUp">TASK4</h2>
+        <h5>Using switch in javascript, write a program to create any four browsers cases of your choice and generate alert (“I am using xyz browser) if user select any one of them.      
+        </h5>
+        <h5>SOLUTION :</h5>
+          <p>
+            var Browser = parseInt(prompt('Enter your choice, 0 for Opera , 1 for Firefox ,2 for Chrome ,3 for Edge:  '));<br>
+switch (Browser) {<br>
+  case 0:<br>
+    alert("you are using Opera Web Browser!");<br>
+    break;<br>
+  case 1:<br>
+    alert("you are using Firefox Web Browser!");<br>
+    break;<br>
+    case 2:<br>
+        alert("you are using Chrome Web Browser!");<br>
+    break;<br>
+    case 3:<br>
+        alert("you are using Edge Web Browser!");<br>
+    break;<br>
+  default:<br>
+    alert( "No value found!");<br>
+}<br>
+      </p>
+      <h5>OUTPUT:</h5>
+    <img src="task4.png" style="height:250px;width:300px;">
+      </div>
+      <h2 class="lineUp">TASK5</h2>
+      <h5>Write a javascript arrow function named calculateSupply that:
+        a.	takes 2 arguments: age, amount per day.
+        b.	calculates the amount consumed for rest of the life (based on a constant max age).
+        c.	outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
+        </h5>
+      <h5>SOLUTION :</h5>
+        <p>
+            calculateSupply = (age,amountperday) => {<br>
+                const maxAge=70;<br>
+                console.log(`You will need ${(amountperday * 365) * (maxAge - age)} to last you until the ripe old age of ${maxAge}`);<br>
+              }<br>
+              calculateSupply(22,500)    <br>        
+    </p>
+    <h5>OUTPUT:</h5>
+  <img src="task5.png" style=" width: 360px;height:100px;">
+    </div>
+    <h2 class="lineUp">TASK6</h2>
+      <h5>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings). Write a method “Recipe” that  print the separate lines (one console.log statement for each), log the recipe information so it looks like:
+        Tea
+        Serves: 2
+        Ingredients:
+        Sugar
+        Tea
+        Water
+        Milk
+        </h5>
+      <h5>SOLUTION :</h5>
+        <p>
+            var favrecipe={ <br>
+                title:"IcedCoffee",
+                Serves:2,<br>
+                Ingredients:["Milk","Coffee","water","Sugar","Ice","VanilaIcecream"],<br>
+                Recipe:function(){<br>
+                    for(var i=0;i < this.Ingredients.length;i++)<br>
+                    {<br>
+                        console.log(this.Ingredients[i]);<br>
+                    }<br>
+                },<br>
+            
+            };<br>
+            favrecipe<br>              
+    </p>
+    <h5>OUTPUT:</h5>
+  <img src="task6.png" style="width: 500px;height: 400px;">
+    </div>
+    <h2 class="lineUp">TASK7</h2>
+    <h5>Write a javascript program to get the below object to go from:
+        let obj = {
+          my: 'name',
+          is: 'Rudolf',
+          the: 'raindeer'
+        }
+        // to this:
+        'my name is Rudolf the raindeer'        
+      </h5>
+    <h5>SOLUTION :</h5>
+      <p>
+        let obj = {<br>
+            my: 'name',<br>
+            is: 'Rudolf',<br>
+            the: 'raindeer',<br>
+            details:function(){<br>
+               
+                    console.log(`my ${this.my} is ${this.is} the ${this.the}`);<br>
+          },<br>
+        };<br>
+        obj.details();<br>
+                  
+  </p>
+  <h5>OUTPUT:</h5>
+<img src="task7.png" style="width:300px;height:50px;">
+  </div>
+  <h2 class="lineUp">TASK8</h2>
+    <h5>Design a Registration form using Bootstrap and validate it using Javascript </h5>
+    <h5>SOLUTION :</h5>   
+    <a href="task8.html">
+        <button >Register here!</button>
+    </a> 
+    
+  </div>
+     
+
+  </body>
+</html>

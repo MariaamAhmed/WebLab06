@@ -1,0 +1,95 @@
+
+body{
+    background-color: #0E185F ;
+    color:white;
+    text-align: center;
+    margin:0px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #2FA4FF;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #D5EEFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+  }
+  
+  h5
+  {
+    margin: 20px 10px;
+      font-family:Lucida Sans Unicode; font-size:20px; text-align:center;
+      color: #D5EEFF;
+    
+  
+  }
+  p{
+      margin: 20px 10px;
+      font-size:large;
+      color:#D5EEFF ;
+       border: dotted #005689 ;
+       text-align:center;
+       line-break:normal;
+  }
+  button
+{
+  height: 50px; 
+  width:150px;
+  background-color:#005689;
+  color: white;
+  border:solid 2px white;
+  border-radius: 5px;
+  font-size: large;
+}
+  img
+  {
+    width:500px;height:400px; margin-right: 15px;
+    position:relative;
+  }
+  
+  .lineUp {
+      animation: 2s anim-lineUp ease-out infinite;
+    }
+    @keyframes anim-lineUp {
+      0% {
+        opacity: 0;
+        transform: translateY(80%);
+      }
+      20% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    /* flipY class and keyframes*/
+    .flipY {
+      animation-name: spin, depth;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 6s;
+    }
+  
